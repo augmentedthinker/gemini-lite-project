@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polyhedral Engine</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+        { "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/",
+            "cannon-es": "https://unpkg.com/cannon-es@0.20.0/dist/cannon-es.js"
+        }}
+    </script>
+</head>
+<body>
+
+    <div id="dice-widget">
+        <div id="widget-ui">
+            <div class="header">
+                <div class="title">Polyhedral Engine</div>
+                <div id="color-picker-wrapper">
+                    <button id="current-color-btn" title="Change Dice Color"></button>
+                    <div id="color-dropdown">
+                        <button class="color-option" data-color="0x3b82f6" style="background: #3b82f6;"></button>
+                        <button class="color-option" data-color="0xef4444" style="background: #ef4444;"></button>
+                        <button class="color-option" data-color="0x22c55e" style="background: #22c55e;"></button>
+                        <button class="color-option" data-color="0xa855f7" style="background: #a855f7;"></button>
+                        <button class="color-option" data-color="0xeab308" style="background: #eab308;"></button>
+                        <button class="color-option" data-color="0x334155" style="background: #334155;"></button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="result-display">20</div>
+            
+            <div class="controls-area">
+                <div class="dice-selector">
+                    <button class="die-btn" data-sides="4">D4</button>
+                    <button class="die-btn" data-sides="6">D6</button>
+                    <button class="die-btn" data-sides="8">D8</button>
+                    <button class="die-btn" data-sides="10">D10</button>
+                    <button class="die-btn" data-sides="12">D12</button>
+                    <button class="die-btn active" data-sides="20">D20</button>
+                </div>
+                <button id="roll-btn">Roll Dice</button>
+            </div>
+        </div>
+        <div id="canvas-container"></div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
